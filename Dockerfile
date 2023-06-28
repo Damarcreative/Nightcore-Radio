@@ -1,20 +1,20 @@
-# Gunakan base image yang sesuai dengan bahasa pemrograman yang digunakan dalam proyek Anda.
+# Use a base image that matches the programming language used in your project.
 FROM python:3.9
 
-# Salin file requirement.txt ke dalam image
+# Copy the requirements.txt file into the image
 COPY requirements.txt .
 
-# Instal dependensi yang diperlukan
+# Install the required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Install FFmpeg
 RUN apt-get update && apt-get install -y ffmpeg
 
-# Salin file main.py ke dalam image
+# Copy the main.py file into the image
 COPY main.py .
 
-# Salin folder "nightcore" ke dalam image
+# Copy the "nightcore" folder into the image
 COPY nightcore /nightcore
 
-# Tentukan perintah untuk menjalankan aplikasi Anda
+# Specify the command to run your application
 CMD ["python", "main.py"]
