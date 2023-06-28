@@ -19,7 +19,8 @@ A simple Discord bot uses python to play musk in a voice channel 24/7 together
 Just run it, make sure you have added or replaced the music inside the "nightcore" file
 
 ## API Key
-Change the Discord API key in the "main.py" file
+Change the Discord API key in the "main.py" file.
+
 Make sure you have activated INTENT PRESENCE, SERVER MEMBER INTENT, and INTENT MESSAGE CONTENT
 on the Developer Discord page.
 
