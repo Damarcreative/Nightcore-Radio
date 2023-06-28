@@ -9,7 +9,7 @@ intents.message_content = True
 intents.voice_states = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
-voice_client = None  # Menyimpan referensi voice client agar bisa diakses di seluruh bot
+voice_client = None  # Save voice client references so they can be accessed across bots
 
 @bot.event
 async def on_ready():
