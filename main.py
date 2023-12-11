@@ -27,7 +27,7 @@ async def play(ctx):
         else:
             voice_client = await channel.connect()
         
-        music_folder = os.path.join(os.path.dirname(__file__), "nightcore")  # Nama folder tempat musik lofi disimpan
+        music_folder = os.path.join(os.path.dirname(__file__), "nightcore")  # The name of the folder where the lofi music is stored
         music_files = [file for file in os.listdir(music_folder) if file.endswith(".mp3")]
         
         if not music_files:
