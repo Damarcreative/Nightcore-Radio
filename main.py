@@ -4,6 +4,8 @@ import random
 import os
 import asyncio
 
+DISCORD_API_KEY = os.getenv('DC_TOKEN')
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True
@@ -64,4 +66,4 @@ async def stop(ctx):
     else:
         await ctx.send("Bot tidak sedang terhubung ke saluran suara.")
 
-bot.run('DISCORD_API_KEY')
+bot.run(DISCORD_API_KEY)
